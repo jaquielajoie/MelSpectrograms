@@ -15,6 +15,27 @@
   - <code> jupyter-lab </code>
   - <code> localhost:8888 (default) </code>
 
+# Speech formalization
+
+(if you see this elsewhere)
+x/X = speech signal
+e/E = glottal pulse
+h/H = vocal tract freq response
+
+<i> pseudo code </i>
+- Speech = convolution of vocal tract frequency response (const based on biology?) with glottal pulse.
+  - speech_signal(t) = glottal_pulse(t) * vocal_tract_freq_response(t)
+  - fourierTransform = (speech_signal, glottal_pulse, vocal_tract_freq_response) => { speech_signal_spectrum(t) = glottal_pulse_spectrum(t) *   vocal_tract_freq_response_spectrum(t) }
+  - __log = (...) => { log(speech_signal_spectrum(t)) = log(glottal_pulse_spectrum(t)) + log(vocal_tract_freq_response_spectrum(t)) }
+    - we can now treat glottal_pulse_spectrum(t) as separate from vocal_tract_freq_response_spectrum(t)
+
+- glottal pulse is not that important.
+- the formants (vocal_tract_freq_response) determine speech identity more strongly. glottal pulse corresponds more with freq.
+
+- frequency to quefrency naturally separates glottal from vocal tract.
+  - lower quefrency carry information about spectral envelop
+  - higher quefrency (fast changing info) carry information about spectral details
+
 # MFCCs (included in the notebooks)
 - BER: band energy ratio (mostly pertains to music genre identification)
 - SC: spectral centroid (maps onto brightness of a feature - like timbre)
@@ -29,11 +50,13 @@
 
 There are 39 features of MFCC:
  - 12 MFCC features
+  - 1 (log) frame energy
+
  - 12 Delta MFCC features (first derivative)
+  - 1 Delta (log) frame energy
+
  - 12 Delta Delta MFCC features (second derivative)
- - 1 (log) frame energy
- - 1 Delta (log) frame energy
- - 1 Delta Delta (log) frame energy
+  - 1 Delta Delta (log) frame energy
 
 Excerpt from... https://www.sciencedirect.com/bookseries/advances-in-computers
 """
