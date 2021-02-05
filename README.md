@@ -40,8 +40,8 @@ IDFT = (inverse) Discrete Fourier Transform
   - __log = (...) => { log(speech_signal_spectrum(t)) = log(glottal_pulse_spectrum(t)) + log(vocal_tract_freq_response_spectrum(t)) }
     - we can now treat glottal_pulse_spectrum(t) as separate from vocal_tract_freq_response_spectrum(t)
 
-- glottal pulse is not that important.
-- the formants (vocal_tract_freq_response) determine speech identity more strongly. glottal pulse corresponds more with freq.
+- glottal pulse is not that important and occupies a higher quefrency.
+- the formants (vocal_tract_freq_response) determine speech identity more strongly.
 
 - frequency -(IDFT)-> quefrency naturally separates glottal from vocal tract.
   - lower quefrency carry information about spectral envelop
