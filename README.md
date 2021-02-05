@@ -92,7 +92,7 @@ The components of MFCCs are the first few DCT coefficients that describe the coa
 
 <hr>
  In practice, the first 8–13 MFCC coefficients are used to represent the shape of the spectrum. However, some applications require more higher-order coefficients to capture pitch and tone information. For example, in Chinese speech recognition up to 20 cepstral coefficients may be beneficial [130]. </span>
-
+ <br>
  <b> languages requiring higher order MFCCs have more emphasis on the glottal pulse as a means to communicate information.</b>
 <hr>
 
