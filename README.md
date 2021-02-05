@@ -5,17 +5,17 @@
 <code> pip install -y librosa </code>
 
 1. Install
-  - git clone https://github.com/jaquielajoie/MelSpectrograms.git
-  - cd MelSpectrograms
-  - python -m venv .venv
-  - source .venv/bin/activate
-  - pip install -r requirements.txt
+  - <code> git clone https://github.com/jaquielajoie/MelSpectrograms.git </code>
+  - <code> cd MelSpectrograms </code>
+  - <code> python -m venv .venv </code>
+  - <code> source .venv/bin/activate </code>
+  - <code> pip install -r requirements.txt </code>
 
 2. Run JupyterLab
   - jupyter-lab
   - localhost:8888 (default)
 
-# MFCCs
+# MFCCs (included in the notebooks)
 - BER: band energy ratio (mostly pertains to music genre identification)
 - SC: spectral centroid (maps onto brightness of a feature - like timbre)
   - weighted mean of frequencies (taken at a given time 't')
