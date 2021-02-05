@@ -15,6 +15,16 @@
   - <code> jupyter-lab </code>
   - <code> localhost:8888 (default) </code>
 
+# Included audio feature expositions in notebooks...
+  - BER: band energy ratio (mostly pertains to music genre identification)
+  - SC: spectral centroid (maps onto brightness of a feature - like timbre)
+    - weighted mean of frequencies (taken at a given time 't')
+    - audio/music classification problems !!
+  - BW: bandwidth (spectral range of interest around the centroid)
+    - weighted mean of distances of frequency bands from SC
+    - greater bias within band, lower BW. Higher variance, greater BW.
+    - music classification (human voice BW is relevant between ~190hz -> ~5000hz, phone companies filter harder than this and it is still intelligible)
+
 # Speech formalization
 
 (if you see this elsewhere)  
@@ -110,16 +120,6 @@ Another extension of MFCCs is introduced in Ref. [132]. Here, the outputs of the
 Li et al. [133] propose a novel feature that may be regarded as an extension of BFCCs. The feature incorporates additional filters that model the transfer function of the cochlea. This enhances the ability to simulate the human auditory system and improves performance in noisy environment
 """
 
-
-# Included audio feature expositions in notebooks...
-- BER: band energy ratio (mostly pertains to music genre identification)
-- SC: spectral centroid (maps onto brightness of a feature - like timbre)
-  - weighted mean of frequencies (taken at a given time 't')
-  - audio/music classification problems !!
-- BW: bandwidth (spectral range of interest around the centroid)
-  - weighted mean of distances of frequency bands from SC
-  - greater bias within band, lower BW. Higher variance, greater BW.
-  - music classification (human voice BW is relevant between ~190hz -> ~5000hz, phone companies filter harder than this and it is still intelligible)
 
 # References
 
