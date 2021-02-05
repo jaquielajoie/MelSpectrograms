@@ -51,9 +51,9 @@ Computation of MFCCs includes a conversion of the Fourier coefficients to Mel-sc
 
 The components of MFCCs are the first few DCT coefficients that describe the coarse spectral shape. The first DCT coefficient represents the average power in the spectrum. The second coefficient approximates the broad shape of the spectrum and is related to the spectral centroid. The higher-order coefficients represent finer spectral details (e.g., pitch).
 
-<hr>
-# NOTE:
+# NOTE
 
+<hr>
  In practice, the first 8–13 MFCC coefficients are used to represent the shape of the spectrum. However, some applications require more higher-order coefficients to capture pitch and tone information. For example, in Chinese speech recognition up to 20 cepstral coefficients may be beneficial [130]. </span>
 <hr>
 
