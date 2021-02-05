@@ -21,6 +21,7 @@
 x/X = speech signal  
 e/E = glottal pulse  
 h/H = vocal tract freq response  
+IDFT = (inverse) Discrete Fourier Transform
 
 <i> pseudo code </i>
 - Speech = convolution of vocal tract frequency response (const based on biology?) with glottal pulse.
@@ -32,7 +33,7 @@ h/H = vocal tract freq response
 - glottal pulse is not that important.
 - the formants (vocal_tract_freq_response) determine speech identity more strongly. glottal pulse corresponds more with freq.
 
-- frequency to quefrency naturally separates glottal from vocal tract.
+- frequency -(IDFT)-> quefrency naturally separates glottal from vocal tract.
   - lower quefrency carry information about spectral envelop
   - higher quefrency (fast changing info) carry information about spectral details
 
