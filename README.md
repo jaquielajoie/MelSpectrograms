@@ -37,17 +37,30 @@ IDFT = (inverse) Discrete Fourier Transform
   - lower quefrency carry information about spectral envelop
   - higher quefrency (fast changing info) carry information about spectral details
 
-# MFCCs (included in the notebooks)
-- BER: band energy ratio (mostly pertains to music genre identification)
-- SC: spectral centroid (maps onto brightness of a feature - like timbre)
-  - weighted mean of frequencies (taken at a given time 't')
-  - audio/music classification problems !!
-- BW: bandwidth (spectral range of interest around the centroid)
-  - weighted mean of distances of frequency bands from SC
-  - greater bias within band, lower BW. Higher variance, greater BW.
-  - music classification (human voice BW is relevant between ~190hz -> ~5000hz, phone companies filter harder than this and it is still intelligible)
+- liftering: (low pass)
+  - removes all high quefrencies (removes glottal pulse)
 
-# Other MFCCs
+ref: https://www.youtube.com/watch?v=4_SH2nfbQZ8&t=1191s
+
+# Computing MFCCs
+
+1. waveform
+2. DFT
+3. Log-Amp Spectrum
+4. Mel-Scaling (mel filterbanks)
+5. Discrete cosine transform (IDFT not used in this case)
+  - DCT > IDFT
+    - Discrete gives back real-value coefficients (as opposed to complex numbers)
+    - De-correlate energy between distinct mel-bands
+    - Reduce dimensions needed to represent spectrum
+6. Profit.
+
+- MFCC index relates to the freq of cosine applied to log spectrum.
+- Higher indexes relate to higher freq cosines.
+
+# More about MFCCs
+
+<i> Note, traditionally MFCCs go to 12-13 index values </i>
 
 There are 39 features of MFCC:
  - 12 MFCC features
@@ -75,10 +88,12 @@ Computation of MFCCs includes a conversion of the Fourier coefficients to Mel-sc
 
 The components of MFCCs are the first few DCT coefficients that describe the coarse spectral shape. The first DCT coefficient represents the average power in the spectrum. The second coefficient approximates the broad shape of the spectrum and is related to the spectral centroid. The higher-order coefficients represent finer spectral details (e.g., pitch).
 
-# NOTE
+# Additional note on MFCC indexes...
 
 <hr>
  In practice, the first 8–13 MFCC coefficients are used to represent the shape of the spectrum. However, some applications require more higher-order coefficients to capture pitch and tone information. For example, in Chinese speech recognition up to 20 cepstral coefficients may be beneficial [130]. </span>
+
+ <b> languages requiring higher order MFCCs have more emphasis on the glottal pulse as a means to communicate information.</b>
 <hr>
 
 Variations of MFCCs. In the course of time several variations of MFCCs have been proposed. They mainly differ in the applied psychoacoustic scale. Instead of the Mel-scale, variations employ the Bark- [32], ERB- [33], and octave-scale [131]. A typical variation of MFCCs are Bark-frequency cepstral coefficients (BFCCs). However, cepstral coefficients based on the Mel-scale are the most popular variant used today, even if there is no theoretical reason that the Mel-scale is superior to the other scales.
@@ -94,9 +109,20 @@ Li et al. [133] propose a novel feature that may be regarded as an extension of 
 
 """
 
+# Included audio feature expositions in notebooks...
+- BER: band energy ratio (mostly pertains to music genre identification)
+- SC: spectral centroid (maps onto brightness of a feature - like timbre)
+  - weighted mean of frequencies (taken at a given time 't')
+  - audio/music classification problems !!
+- BW: bandwidth (spectral range of interest around the centroid)
+  - weighted mean of distances of frequency bands from SC
+  - greater bias within band, lower BW. Higher variance, greater BW.
+  - music classification (human voice BW is relevant between ~190hz -> ~5000hz, phone companies filter harder than this and it is still intelligible)
+
 # References
 
 1. https://musicinformationretrieval.com/about.html
 2. https://jonathan-hui.medium.com/speech-recognition-feature-extraction-mfcc-plp-5455f5a69dd9
 3. https://www.sciencedirect.com/bookseries/advances-in-computers
-4. https://www.sciencedirect.com/topics/computer-science/cepstral-coefficient#:~:text=In%20practice%2C%20the%20first%208,Variations%20of%20MFCCs.
+4. https://www.sciencedirect.com/topics/computer-science/cepstral-coefficient#:~:text=In%20practice%2C%20the%20first%208,Variations%20of%20MFCCs
+5. https://www.youtube.com/watch?v=4_SH2nfbQZ8&t=1191s
