@@ -74,4 +74,5 @@ Li et al. [133] propose a novel feature that may be regarded as an extension of 
 
 1. https://musicinformationretrieval.com/about.html
 2. https://jonathan-hui.medium.com/speech-recognition-feature-extraction-mfcc-plp-5455f5a69dd9
-3. https://www.sciencedirect.com/topics/computer-science/cepstral-coefficient#:~:text=In%20practice%2C%20the%20first%208,Variations%20of%20MFCCs.
+3. https://www.sciencedirect.com/bookseries/advances-in-computers
+4. https://www.sciencedirect.com/topics/computer-science/cepstral-coefficient#:~:text=In%20practice%2C%20the%20first%208,Variations%20of%20MFCCs.
