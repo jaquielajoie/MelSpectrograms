@@ -17,10 +17,10 @@
 
 # Speech formalization
 
-(if you see this elsewhere)
-x/X = speech signal
-e/E = glottal pulse
-h/H = vocal tract freq response
+(if you see this elsewhere)  
+x/X = speech signal  
+e/E = glottal pulse  
+h/H = vocal tract freq response  
 
 <i> pseudo code </i>
 - Speech = convolution of vocal tract frequency response (const based on biology?) with glottal pulse.
