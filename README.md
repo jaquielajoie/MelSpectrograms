@@ -12,8 +12,8 @@
   - <code> pip install -r requirements.txt </code>
 
 2. Run JupyterLab
-  - jupyter-lab
-  - localhost:8888 (default)
+  - <code> jupyter-lab </code>
+  - <code> localhost:8888 (default) </code>
 
 # MFCCs (included in the notebooks)
 - BER: band energy ratio (mostly pertains to music genre identification)
