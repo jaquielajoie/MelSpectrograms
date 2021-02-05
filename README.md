@@ -24,6 +24,8 @@ librosa: https://github.com/librosa (mostly python)
     - weighted mean of distances of frequency bands from SC
     - greater bias within band, lower BW. Higher variance, greater BW.
     - music classification (human voice BW is relevant between ~190hz -> ~5000hz, phone companies filter harder than this and it is still intelligible)
+  - AE: amplitude envelope
+    - could be useful for silence detection
 
 # Speech formalization
 
