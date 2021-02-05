@@ -1,9 +1,5 @@
 # Mel-Spectrograms
 
-- librosa seems to be a very powerful package  
-<a href="https://librosa.org/doc/latest/index.html"> https://librosa.org/doc/latest/index.html </a>  
-<code> pip install -y librosa </code>
-
 1. Install
   - <code> git clone https://github.com/jaquielajoie/MelSpectrograms.git </code>
   - <code> cd MelSpectrograms </code>
