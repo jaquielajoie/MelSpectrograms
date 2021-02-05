@@ -60,6 +60,9 @@ ref: https://www.youtube.com/watch?v=4_SH2nfbQZ8&t=1191s
 
 # More about MFCCs
 
+MFCCs provide information about the phonemes. Cutting out the spectral details reduces the amount of info needed to be processed.
+This makes them not a good choice for vocal synthesis.
+
 <i> Note, traditionally MFCCs go to 12-13 index values </i>
 
 There are 39 features of MFCC:
@@ -107,7 +110,6 @@ Another extension of MFCCs is introduced in Ref. [132]. Here, the outputs of the
 Li et al. [133] propose a novel feature that may be regarded as an extension of BFCCs. The feature incorporates additional filters that model the transfer function of the cochlea. This enhances the ability to simulate the human auditory system and improves performance in noisy environment
 """
 
-"""
 
 # Included audio feature expositions in notebooks...
 - BER: band energy ratio (mostly pertains to music genre identification)
