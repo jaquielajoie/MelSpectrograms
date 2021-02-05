@@ -1,7 +1,8 @@
 # Mel-Spectrograms
 
-openSMILE: https://github.com/audeering/opensmile (mostly C++)
-librosa: https://github.com/librosa (mostly python)
+openSMILE: https://github.com/audeering/opensmile (mostly C++)  
+
+librosa: https://github.com/librosa (mostly python)  
 
 1. Install
   - <code> git clone https://github.com/jaquielajoie/MelSpectrograms.git </code>
